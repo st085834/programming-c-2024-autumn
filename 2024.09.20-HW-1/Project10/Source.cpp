@@ -1,18 +1,14 @@
 #include <iostream>
 
-int main()
+int main(int argc, char* argv[])
 {
-    int S = 0;
-    int Girl = 0;
-    int Boy = 0;
+    int s = 0;
+    int girl = 0;
+    int boy = 0;
     int day = 0;
-    scanf_s("%d", &S);
-    Boy = S / 6;
-    Girl = Boy * 4;
-    printf("%d", Boy);
-    printf("%s", " ");
-    printf("%d", Girl);
-    printf("%s", " ");
-    printf("%d", Boy);
+    scanf_s("%d", &s);
+    boy = s / 6;
+    girl = boy * 4;
+    printf("%d %d %d", boy, girl, boy);
     return EXIT_SUCCESS;
 }

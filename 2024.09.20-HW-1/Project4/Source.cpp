@@ -1,13 +1,13 @@
 #include <iostream>
 
-int main()
+int main(int argc, char* argv[])
 {
-    int N = 0;
-    int A = 0;
-    int B = 0;
-    scanf_s("%d", &N);
-    scanf_s("%d", &A);
-    scanf_s("%d", &B);
-    printf("%d", N * A * B * 2);
+    int n = 0;
+    int a = 0;
+    int b = 0;
+    scanf_s("%d", &n);
+    scanf_s("%d", &a);
+    scanf_s("%d", &b);
+    printf("%d", n * a * b * 2);
     return EXIT_SUCCESS;
 }

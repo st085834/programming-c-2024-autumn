@@ -1,10 +1,10 @@
 #include <iostream>
 
-int main()
+int main(int argc, char* argv[])
 {
-    int N = 0;
-    scanf_s("%d", &N);
-    printf("%d", N + 1);
+    int n = 0;
+    scanf_s("%d", &n);
+    printf("%d", n + 1);
 
     return EXIT_SUCCESS;
 }

@@ -1,17 +1,10 @@
 #include <iostream>
 
-int main()
+int main(int argc, char* argv[])
 {
-    int N = 0;
-    scanf_s("%d", &N);
-    printf("%s", "The next number for the number ");
-    printf("%d", N); 
-    printf("%s", " is "); 
-    printf("%d", N + 1); 
-    '\n';
-    printf("%s", "The previous number for the number ");
-    printf("%d", N);
-    printf("%s", " is ");
-    printf("%d", N - 1);
+    int n = 0;
+    scanf_s("%d", &n);
+    printf("%s%d%s%d\n", "The next number for the number ", n, " is ", n + 1);
+    printf("%s%d%s%d", "The previous number for the number ", n, " is ", n - 1);
     return EXIT_SUCCESS;
 }

@@ -1,13 +1,11 @@
 #include <iostream>
 
-int main()
+int main(int argc, char* argv[])
 {
-    int G = 0;
-    int L = 0;
-    scanf_s("%d", &G);
-    scanf_s("%d", &L);
-    printf("%d", L - 1); 
-    printf("%s", " ");
-    printf("%d", G - 1);
+    int g = 0;
+    int l = 0;
+    scanf_s("%d", &g);
+    scanf_s("%d", &l);
+    printf("%d%s%d", l - 1, " ", g - 1);
     return EXIT_SUCCESS;
 }
