@@ -54,7 +54,7 @@ public:
 	}
 	void print()
 	{
-		for (int i = 0; i < this->len; ++i)
+		for (int i = 0; i < sizeof(this->data); ++i)
 		{
 			printf("%d ", this->data[i]);
 		}
@@ -130,9 +130,10 @@ public:
 		}
 		std::cout << std::endl;
 	}
-	void popBack()
+	int popBack()
 	{
 		int* a = (int*)malloc(sizeof(int) * (len - 1));
+		int b = this->data[len - 1];
 		for (int i = 0; i < len - 1; ++i)
 		{
 			a[i] = this->data[i];
@@ -143,10 +144,12 @@ public:
 			std::cout << this->data[i] << " ";
 		}
 		std::cout << std::endl;
+		return b;
 	}
-	void popFront()
+	int popFront()
 	{
 		int* a = (int*)malloc(sizeof(int) * (len - 1));
+		int b = this->data[0];
 		for (int i = 1; i < len; ++i)
 		{
 			a[i] = this->data[i];
@@ -157,6 +160,7 @@ public:
 			std::cout << this->data[i] << " ";
 		}
 		std::cout << std::endl;
+		return b;
 	}
 	int extract(int index)
 	{
@@ -246,7 +250,7 @@ public:
 			a[(i + k) % len] = this->data[i];
 		}
 		this->data = a;
-		return;
+		return 0;
 	}
 	int countOdd()
 	{
@@ -278,11 +282,7 @@ int main(int argc, char* argv[])
 	ArrayList list(10);
 	list.randomize();
 	list.print();
-	printf("%d\n", max(list));
-	list.pushBack(10);
-	list.pushFront(10);
-	list.insert(2, 10);
-	list.popBack();
-	list.popFront();
+	std::cout << list.popBack() << "\n";
+	list.print();
 	return 0;
 }
